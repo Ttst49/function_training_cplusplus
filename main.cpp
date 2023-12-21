@@ -11,7 +11,43 @@ double distance(double xa,double ya,double xb, double yb){
 }
 
 
+double equationF(double x, bool &ok){
+
+    double answer;
+
+    if(x>=1 && x<=2){answer=sqrt((x-1)*(2-x));ok=true;}
+    else ok=false;
+    return answer;
+}
+
+int testEquationF(){
+    double x,y;
+    bool ok;
+    std::cout<<"Tapez x :";std::cin>>x;
+    y= equationF(x,ok);
+    if (ok){std::cout << "La valeur de x est "<<y << std::endl;}
+    else{std::cout<< "La valeur de x n'est pas correct";}
+
+    return 0;
+}
+
+
+int exchangeTwoVariables(){
+    int a,b,tmp;
+    std::cout << "Donnez la valeur a";
+    std::cin >> a;
+    std::cout << "Donnez la valeur b";
+    std::cin >> b;
+    std::cout << "Chargement...";
+    tmp = a;
+    a = b;
+    b = tmp;
+    std::cout << "La valeur a est " << a << " et la valeur b est " << b;
+
+    return 0;
+}
+
 int main() {
-    distance(5,5,6,6);
+    exchangeTwoVariables();
     return 0;
 }
