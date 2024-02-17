@@ -100,7 +100,19 @@ bool checkIfVInArray(){
     return b;
 }
 
+int swap(int a,int b){
+
+    int tmp;
+    tmp = a;
+    a=b;
+    b=tmp;
+    std::cout << a << b;
+    return 0;
+}
+
+
+
 int main() {
-    isNumberPrime();
+    swap(12,24);
     return 0;
 }
